@@ -1,0 +1,13 @@
+version: "3.8"      
+
+services:
+  postgres_db:
+    image: postgres:15.8
+    environment:
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test123
+      POSTGRES_DB: testMicrosoft
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
